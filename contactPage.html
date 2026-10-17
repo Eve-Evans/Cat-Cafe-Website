@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabby and Tea Cat Café</title>
+    <!-- Stylesheets for the page -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/booking.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Delius">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gamja+Flower">
+</head>
+<body>
+    <!-- Navigation -->
+     <div role = "navigation" class="container">
+        <header class="header">
+           <h1>Tabby and Tea</h1>
+            <nav class="nav">
+                <!-- Main navigation menu -->
+                <ul>
+                    <!-- Navigation links -->
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catGallery.html">Meet Our Cats</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="booking.html">Book</a></li>
+                    <li><a href="contactPage.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Dropdown navigation for smaller screens -->
+            <div role = "drop down navigation bar" class = "dropdownNav">
+                <button class = "dropdownButton">☰ Menu</button>
+                    <div class = "dropdownContent">
+                        <!-- Dropdown links-->
+                        <a href="index.html">Home</a>
+                        <a href="catGallery.html">Meet Our Cats</a>
+                        <a href="menu.html">Menu</a>
+                        <a href="aboutUs.html">About Us</a>
+                        <a href="booking.html">Book</a>
+                        <a href="contactPage.html">Contact</a>
+                    </div>
+            </div>
+            <!-- Theme selector and font size slider -->
+            <select id="theme-selector">
+                <option value="pink">Default Pink Theme</option>
+                <option value="light">Light Theme</option>
+                <option value="dark">Dark Theme</option>
+                <option value="rainbow">Rainbow Theme</option>
+            </select>
+            <p id="sample-text">Change font size: </p>
+            <input type="range" id="font-size" min="12" max="36" value="16">
+        </header>
+       <!-- Main content of the page -->
+        <main class="main">
+            <h2>Contact Us</h2>
+            <p>For bookings, events, or general inquiries, please get in touch with the details below. We’re happy to answer your questions and help you plan your perfect café experience.</p>
+            <h3>Contact Form</h3>
+            <!-- Contact form for users to submit their inquiries -->
+            <form action="" id = "contactForm">
+                <p>Please fill in the form to send us an enquiry.</p>
+                <!-- Error message / Success message for form validation -->
+                <p id="errorMessage" class="errorMessage hidden"></p>
+                <label for="">Name:</label> <!-- Name -->
+                <input type="text" name="" id="name1" placeholder="Please type your name."> <br> <br>
+                <label for="">Email Address:</label> <!-- Email Address -->
+                <input type="email" name="" id="email1" placeholder="Please type your email address."> <br> <br>
+                <label for="">Phone Number (optional):</label> <!-- Phone number -->
+                <input type="number" name="" id="phone1" placeholder="Please type your phone number."> <br> <br>
+                <label for="">Your message:</label> <!-- Message box -->
+                <input class = "message" type="text" name="" id="message1" placeholder="Please type your message."> <br> <br>
+                <label for="">Reason for contact:</label> <!-- Dropdown menu for reason of contact -->
+                <select name="" id="reason1">
+                    <option value="">Please select a reason: </option>
+                    <option value="Event enquiry (e.g. parties)">Event enquiry (e.g. parties)</option>
+                    <option value="Cat yoga">Cat yoga</option>
+                    <option value="Menu/Allergy info">Menu/Allergy info</option>
+                    <option value="Adoption/rescue questions">Adoption/rescue questions</option>
+                    <option value="Booking questions">Booking questions</option>
+                    <option value="Complaint">Complaint</option>
+                    <option value="General meow">General meow</option>
+                    <option value="Looking for a job">Looking for a job</option>
+                    <option value="Other">Other</option>
+                </select> <br> <br>
+                <label for="">Are you a cat or a human? </label> <!-- buttons for cat or human -->
+                <br>
+                <label for="">Cat:</label>
+                <input type="radio" name="gender" id=""> 
+                <label for="">Human:</label>
+                <input type="radio" name="gender" id=""> 
+                <br> <br>
+                <!-- Submit button -->
+                <input type="submit" value="Submit">
+            </form>
+            <!-- Direct contact information for users who prefer to contact the café directly -->
+            <h3>Direct Contact Information</h3>
+            <p>Name: Catrina McWhiskers</p>
+            <p>Enail Address: meowmail@tabbyandtea.com</p>
+            <p>Phone Number: +44 1234 567 890</p>
+            <p>Address: 33 Furball Street, Purrshore, Worcestershire, WR10 111</p>
+        </main>
+        <!-- Aside section with extra information -->
+        <aside class="aside">
+            <h4>Join Kitty club!</h4>
+            <p>Earn paw points every visit to enjoy free drinks!</p>
+            <h4>Cat Merch!</h4>
+            <p>We have cute cat goodies in store! Cat mugs, tote bags, t-shirts, stickers, pins and much more...</p>
+        </aside>
+        <!-- Footer section with links and information -->
+        <footer class="footer">
+            <h3 class = "footerSeeYouSoon">See you soon!</h3>
+            <div class = "footerMenu">
+                 <h4>Main Menu</h4>
+                <a class = "footerLinks" href="index.html">Home</a> <br>
+                <a class = "footerLinks" href="catGallery.html">Meet Our Cats</a> <br>
+                <a class = "footerLinks" href="menu.html">Menu</a> <br>
+                <a class = "footerLinks" href="aboutUs.html">About Us</a> <br>
+                <a class = "footerLinks" href="booking.html">Book a slot</a> <br>
+                <a class = "footerLinks" href="contactPage.html">Contact Us</a> <br>
+            </div>
+            <div class = "footerLegal">
+                <h4>Legal Stuff</h4>
+                <p>Terms & Conditions</p>
+                <p>Cookie Policy</p>
+                <p>Privacy Policy</p>
+            </div>
+            <div class = "footerInformation">
+                <h4>Information</h4>
+                <p>Newsletter Signup</p>
+                <p>Social Media: @tabbyandtea</p>
+            </div>
+        </footer>
+    </div>
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/contactUs.js"></script>
+</body>
+</html>
