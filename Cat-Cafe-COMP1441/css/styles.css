@@ -1,0 +1,345 @@
+/*Width and height of elements include content & padding & border*/
+* {
+  box-sizing: border-box;
+}
+
+/*Default font and font size, with no margins*/
+body {
+  margin: 0;
+  font-family:Delius, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*CSS Grid*/
+.container {
+  display: grid;
+  grid-template-areas: 
+      "header header"
+      "main main"
+      "aside footer";
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto 3fr auto;
+  min-height: 100vh; /*Fits 100% of visible screen height.*/
+  grid-gap: 10px;
+  background-color: #fab49f;
+    
+}
+ 
+.header {
+  grid-area: header;
+  background-color:#ee91a9;
+  padding: 20px;
+  text-align: center;
+  font-size: 2rem;
+  color: #7A3B46;
+  font-family: Gamja Flower, Arial, Helvetica, sans-serif;
+}
+
+#theme-selector {
+  display: block;
+  margin: 50px auto 0 auto;
+  padding: 8px 12px;
+  border: 0px;
+  background-color: #f6de9e;
+  color: #02024e;
+  font-size: 0.5em;
+  width: 20%;
+  height: 50px;
+  cursor: pointer;
+}  
+#sample-text { 
+  display: inline-block;
+  text-align: center;
+  color: #02024e;
+}
+#font-size {
+  display: inline-block;
+  background-color: #f6de9e;
+  font-size: 0.5em;
+}
+
+
+/*Navigation bar*/
+nav ul {
+  list-style-type: none; /*Removes bullet points from the list*/
+  margin: 0;
+  padding: 0;
+  background-color: #f6de9e;
+  overflow: hidden; /*Makes sure the nav bar expands to fit float items*/
+  display: inline-flex;
+  justify-content: center; /*Centers the nav links*/
+    
+}
+
+ul li a {
+  display: block;
+  border-left:#ee91a9 2px solid;
+  border-right: #ee91a9 2px solid;
+  color: #02024e;
+  padding: 14px 16px;
+  text-decoration: none; /*Removes underline from links*/
+}
+
+ul li a:hover {
+  background-color: #ee91a894;
+ 
+  
+}
+
+ul li a:active {
+  background-color: #c3e1cf;
+}
+
+/*Main area*/
+.main {
+  grid-area: main;
+  background-color: #f8d7cd;
+  padding: 20px;
+  text-align: center;
+  color: #02024e;
+}
+
+
+/*Sidebar*/
+.aside {
+  grid-area: aside;
+  background-color: #f6de9e;
+  padding: 20px;
+}
+
+/*Footer*/
+.footerSeeYouSoon {
+  grid-area: footerSeeYouSoon;
+}
+
+.footerMenu {
+  grid-area: footerMenu;
+}
+
+.footerInformation {
+  grid-area: footerInformation;
+}
+
+.footerLegal {
+  grid-area: footerLegal;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #ee91a9;
+  color: black;
+  padding: 20px;
+  text-align: left;
+  display: grid;
+  grid-template-areas: 
+    "footerSeeYouSoon footerMenu footerInformation footerLegal"; 
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.footerLinks{
+  color: black;
+}
+
+
+/*Dropdown Menu for small screens*/
+.dropdownButton {
+  background-color: #f6de9e;
+  color: black;
+  padding: 16px;
+  width: 100%;
+  font-size: 16px;
+  border: none;
+  cursor: pointer; /*Pointer cursor on hover*/
+}
+
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #f6de9e;
+  width: 100%;
+  
+}
+
+
+.dropdownContent a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block; /*Makes the whole area clickable*/
+}
+
+
+.dropdownContent a:hover {
+  background-color: #ee91a894
+}
+
+
+.dropdownNav:hover .dropdownContent {
+  display: block;
+}
+
+
+.dropdownNav:hover .dropdownButton {
+  background-color: #c3e1cf;
+}
+
+.dropdownNav {
+  position: relative;
+}
+
+
+
+
+
+
+
+/*Responsive web page (navigation bar & sidebar and footer on top of each other for small screens)*/
+@media (min-width:600px) {
+  .dropdownNav{
+    display: none;
+  }
+        
+}
+@media (max-width: 800px) {
+  .container {
+    grid-template-areas: 
+      "header"
+      "main"
+      "aside"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+ .footer{
+    grid-template-areas: 
+      "footerSeeYouSoon" 
+      "footerMenu" 
+      "footerInformation"
+      "footerLegal"; 
+ }
+  
+  .footer h4, footer h3 {
+  margin: 0 0 4px 0;
+  }
+
+  
+
+}
+@media (max-width: 960px) {
+  nav {
+    display: none;
+  }
+  .dropdownNav {
+    display: flex;
+  }
+}
+/*titles*/
+h2{
+  font-family:Gamja Flower, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 3em;
+}
+
+h3{
+  font-family:Gamja Flower, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+
+h4{
+  font-family:Gamja Flower, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+/* The Modal */
+/* w3schools (2026). How TO – CSS/JS Modal. Available at : https://www.w3schools.com/howto/howto_css_modals.asp (26 April 2026)  */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sits on top */
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Can scroll if needed */
+  background-color: #ee91a87a; 
+}
+/* Modal Content */
+.modal-content {
+  background-color: #fab49f;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ee91a9;
+  width: 80%;
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn{
+  margin: 0;
+  padding: 10px;
+  background-color: #f6de9e;
+  overflow: hidden;
+  display: inline-flex;
+  justify-content: center; 
+  width:90px;
+  height: 90px;
+  text-align: center;
+  font-size: 19px;
+  border-radius: 50%;
+  border: 2px solid #fab49f;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+
+.btn:hover {
+  background-color: #f3d48a;
+  cursor: pointer;
+  box-shadow: 0 0 10px #fab49f;
+}
+
+/*FAQ*/
+.FAQ-button {
+  background-color: #f6de9e;
+  color: #02024e;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  text-align: center;
+
+}
+/*Active and hovering for FAQ buttons*/
+.active, .FAQ-button:hover {
+  background-color: #ee91a894; 
+}
+/*FAQ answer section*/
+.FAQ-answer{
+  padding: 0 18px;
+  display: none;
+  background-color: #f8d7cd;
+  overflow: hidden;
+}
+/*FAQ answer paragraphs*/
+.FAQ-answer p {
+  margin: 10px 0;
+}
